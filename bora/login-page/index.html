@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container" id="container">
+        <div class="formulario registrar">
+            <form>
+                <h1 class="titulo">Crie uma conta!</h1>
+                <div class="redes-sociais">
+                    <a href="#" class="icone"><i class="fa-brands fa-google"></i></a>
+                    <a href="#" class="icone"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"class="icone"><i class="fa-brands fa-github"></i></a>
+                    <a href="#"class="icone"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+                <span>ou use seu email para registrar</span>
+                <input type="text" placeholder="Usuário">
+                <input type="email" placeholder="Digite seu email">
+                <input type="password" placeholder="Senha">
+                <button class="btn-registrar">Registrar-se</button>
+            </form>
+        </div>
+        <div class="formulario entrar">
+            <form>
+                <h1 class="titulo">Entre com sua conta!</h1>
+                <div class="redes-sociais">
+                    <a href="#" class="icone"><i class="fa-brands fa-google"></i></a>
+                    <a href="#" class="icone"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"class="icone"><i class="fa-brands fa-github"></i></a>
+                    <a href="#"class="icone"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+                <span>ou use seu email para entrar</span>
+                <input type="email" placeholder="Digite seu email">
+                <input type="password" placeholder="Senha">
+                <a href="#">Esqueceu sua senha?</a>
+                <button class="btn-entrar" id="botao-entrar">Entrar</button>
+            </form>
+        </div>
+        <div class="alternar-container">
+            <div class="alternar">
+                <div class="alternar-painel alternar-esquerda">
+                    <h1 class="titulo">Seja Bem vindo(a) de Volta!</h1>
+                    <p>Insira seus dados pessoais para usar todos os recursos do Bora</p>
+                    <button class="escondido" id="login">Entrar</button>
+                </div>
+                <div class="alternar-painel alternar-direita">
+                    <h1 class="titulo">Olá, Tudo Bem?</h1>
+                    <p>Registre com dados pessoais para usar todos os recursos do Bora!</p>
+                    <button class="escondido" id="registro">Registrar-se</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
