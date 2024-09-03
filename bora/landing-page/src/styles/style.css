@@ -1,0 +1,221 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+/* font-family: 'Montserrat', sans-serif; */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root {
+    --laranja:#d9a14c;
+}
+
+body {
+    color: white;
+    background-color: var(--laranja);
+    transition: opacity 0.5s ease-in-out;
+}
+
+.fade-out {
+    opacity: 0;
+}
+
+.navegacao {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2vw 4vw;
+    box-shadow: 0 0.1rem 0.5rem rgba(0, 0, 0, 0.308);
+    width: 100%;
+    background: var(--laranja);
+    transition: all 0.5s ease-in-out;
+}
+
+.navegacao .logo {
+    color: white;
+    font-size: 2.7vw;
+    font-weight: 600;
+}
+
+.logo span {
+    color: black;
+}
+
+.navegacao ul {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+}
+
+.navegacao ul li a {
+    color: white;
+    font-size: 1.2vw;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+}
+
+.navegacao ul li a:hover {
+    color: #31302f;
+    text-decoration: underline;
+}
+
+.menu {
+    cursor: pointer;
+    display: none;
+}
+
+.menu .bar {
+    display: block;
+    width: 2.2vw;
+    height: 0.2vw;
+    border-radius: 0.3vw;
+    background: white;
+    margin: 0.5vw auto;
+    transition: all 0.3s;
+}
+
+.home {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10%;
+}
+
+.home-texto {
+    max-width: 37rem;
+}
+
+.home-texto .texto-h4 {
+    font-size: 1.5vw;
+    color: #42210b;
+    margin-bottom: 1.6vw;
+}
+
+.home-texto .texto-h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    line-height: 4rem;
+}
+
+.home-texto p {
+    margin-bottom: 4rem;
+}
+
+.home-btn {
+    padding: 1.5vw 4.5vw;
+    background-color: #42210b;
+    color: white;
+    font-size: 1.6vw;
+    border-radius: 1vw;
+    font-weight: 700;
+    transition: all 0.3s;
+}
+
+.home-btn:hover {
+    background-color: #42210bde;
+}
+
+.home-bora {
+    width: 100%;
+}
+
+.home-bora img {
+    width: 100%;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px;
+    background-color: #222;
+    border-top: 1px solid #444;
+}
+
+@media (max-width: 785px) {
+    
+    .navegacao {
+        padding: 12px 2vw;
+    }
+
+    .navegacao .logo {
+        font-size: 4vw;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    .menu.ativo .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .menu.ativo .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu.ativo .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu {
+        position: fixed;
+        right: -100%;
+        top: 7vw;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        background-color: #d9a14c;
+        gap: -1vw;
+        transition: 0.3s;
+    }
+
+    .nav-menu.ativo {
+        right: 0;
+    }
+
+    .nav-item {
+        margin: 1.6vw 0;
+    }
+
+    /*main*/
+
+    .home {
+        padding: 10vw 2%;
+        flex-direction: column;
+        text-align: center;
+        overflow: hidden;
+        gap: 5rem;
+    }
+
+    .home .texto-h4 {
+        margin-top: 2vw;
+        font-size: 4vw;
+    }
+
+    .home .texto-h1 {
+        font-size: 2.5em;
+        line-height: 3rem;
+    }
+
+    .home p {
+        font-size: 2.5vw;
+    }
+
+    .home-btn {
+        padding: 4vw;
+        font-size: 4vw;
+    }
+
+    .home-bora {
+        width: 125%;
+    }
+}
