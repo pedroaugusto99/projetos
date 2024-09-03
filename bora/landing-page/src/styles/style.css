@@ -135,9 +135,10 @@ body {
 
 .footer-bottom {
     text-align: center;
-    padding: 10px;
+    padding: 1vw;
     background-color: #222;
     border-top: 1px solid #444;
+    transform: translateY(100%);
 }
 
 @media (max-width: 785px) {
@@ -178,14 +179,18 @@ body {
         transition: 0.3s;
     }
 
+    .navegacao .nav-menu .nav-item a {
+        font-size: 3vw;
+    }
+
     .nav-menu.ativo {
         right: 0;
     }
 
     .nav-item {
-        margin: 1vw 0;
-        font-size: 6vw;
+        margin: 1.6vw 0;
     }
+
 
     /*main*/
 
@@ -193,7 +198,6 @@ body {
         padding: 10vw 2%;
         flex-direction: column;
         text-align: center;
-        overflow: hidden;
         gap: 5rem;
     }
 
@@ -218,5 +222,9 @@ body {
 
     .home-bora {
         width: 125%;
+    }
+
+    .footer-bottom {
+        display: none;
     }
 }
