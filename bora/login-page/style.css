@@ -116,7 +116,8 @@ body {
 }
 
 .container input:focus {
-    border-color: #01060c;
+    /*border-color: #01060c;*/
+    border-color: #d9a14c;
     box-shadow: 0 0 0 2px rgb(1, 5, 10);
 }
 
