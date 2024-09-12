@@ -1,0 +1,491 @@
+/*<================= [Geral] ======================>*/
+
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --cor-primaria-1: #fff9ea;
+    --cor-primaria-2: #ffe8b4;
+    --cor-primaria-3: #f8d477;
+    --cor-primaria-4: #ffe100;
+    --cor-primaria-5: #ffcb45;
+    --cor-primaria-6: #e9a209;
+
+    --cor-neutra-0: #fff;
+    --cor-neutra-1: #1d1d1d;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--cor-primaria-1);
+}
+
+section {
+    padding: 2.8vw 8%;
+}
+
+.btn-padrao {
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cor-primaria-5);
+    border-radius: 1.2vw;
+    padding: 1vw 1.4vw;
+    font-weight: 600;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, .1);
+    cursor: pointer;
+
+    transition: background-color .3s ease;
+}
+
+.btn-padrao:hover {
+    background-color: var(--cor-primaria-3);
+}
+
+.midias-sociais-botoes {
+    display: flex;
+    gap: 1.8vw;
+}
+
+.midias-sociais-botoes a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4.5vw;
+    height: 4vw;
+    background-color: var(--cor-neutra-0);
+    font-size: 1.25rem;
+    border-radius: 1vw;
+    text-decoration: none;
+    color: var(--cor-neutra-1);
+    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, .1);
+
+    transition: box-shadow 0.3s ease;
+}
+
+.midias-sociais-botoes a:hover {
+    box-shadow: 0px 0px 12px 8px rgba(0, 0, 0, .1);
+}
+
+.section-titulo {
+    color: var(--cor-primaria-6);
+    font-size: 1.563rem;
+
+}
+
+.section-subtitulo {
+    font-size: 2.1875rem;
+}
+
+/*<================= [header] ======================>*/
+
+
+
+header {
+    width: 100%;
+    padding: 2.8vw 8%;
+    position: sticky;
+    top: 0;
+    background-color: var(--cor-primaria-1);
+    z-index: 3;
+}
+
+#navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#nav-logo {
+    font-size: 2.4vw;
+    color: var(--cor-primaria-6);
+}
+
+#nav-lista {
+    display: flex;
+    list-style: none;
+    gap: 4.8vw;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: #1d1d1dad;
+    font-family: 600;
+}
+
+.nav-item.active a {
+    color: var(--cor-neutra-1);
+    border-bottom: 0.3vw solid var(--cor-primaria-4);
+}
+
+#mobile-btn {
+    display: none;
+}
+
+#mobile-menu {
+    display: none;
+}
+
+
+@media screen and (max-width: 1170px) {
+    #nav-lista, 
+    #navbar .btn-padrao {
+        display: none;
+    }
+    #mobile-btn {
+        display: block;
+        border: none;
+        background-color: transparent;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    #mobile-menu.active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #mobile-nav-lista {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2vw;
+        margin: 1.2vw 0vw;
+    }
+
+    #mobile-nav-lista .nav-item {
+        list-style: none;
+        text-align: center;
+    }
+}
+
+
+/*<================= [home] ======================>*/
+
+
+
+#home {
+    position: relative;
+    display: flex;
+    min-height: calc(100vh - 9.1vw);
+}
+
+#cta {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    gap: 2.8vw;
+    margin-top: 5%;
+}
+
+#cta .titulo {
+    font-size: 4rem;
+    color: var(--cor-neutra-1);
+}
+
+#cta .titulo span {
+    color: var(--cor-primaria-6);
+}
+
+#cta.descricao {
+    font-size: 1.2rem;
+}
+
+#cta-botoes {
+    display: flex;
+    gap: 2.4vw;
+}
+
+#cta-botoes a {
+    text-decoration: none;
+    color: var(--cor-neutra-1);
+}
+
+#telefone-botao {
+    display: flex;
+    gap: 0.8vw;
+    align-items: center;
+    background-color: var(--cor-neutra-0);
+    padding: 0.8vw 1.4vw;
+    font-weight: 500;
+    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, .1);
+    border-radius: 1.2vw;
+    font-size: smaller;
+}
+
+#telefone-botao button {
+    box-shadow: none;
+    width: 4vw;
+}
+
+#banner {
+    display: flex;
+    align-items: start;
+    justify-content: end;
+    width: 70%;
+}
+
+#banner img {
+    height: 90%;
+    width: fit-content;
+    object-fit: cover;
+    z-index: 2;
+}
+
+.forma {
+    background-color: var(--cor-primaria-2);
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    border-radius: 40% 30% 0% 20%;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+
+@media screen and (max-width: 1170px) {
+    #home {
+        min-height: 100%;
+        padding-top: 0;
+    }
+
+    #banner,
+    #banner img,
+    #home .forma {
+        display: none;
+    }
+
+    #cta {
+        width: 100%;
+        text-align: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    #telefone-botao button {
+        display: none;
+    } 
+}
+
+
+
+/*<================= [menu] ======================>*/
+
+
+
+#menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+#planos {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 2.4vw;
+    margin-top: 3.2vw;
+}
+
+.plano {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 2vw;
+    gap: 1.8vw;
+    width: 35%;
+    padding: 2vw;
+    background-color: var(--cor-neutra-0);
+    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, .1);
+    overflow: hidden;
+}
+
+.plano-tag {
+    position: absolute;
+    background-color: var(--cor-primaria-6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.563rem;
+    color: var(--cor-primaria-1);
+    width: 7vw;
+    height: 7vw;
+    right: -1vw;
+    top: -1vw;
+    border-radius: 0vw 3.75vw 0vw 4.25vw;
+}
+
+.plano-descricao {
+    color: #434343;
+    text-align: center;
+}
+
+.plano-rate i {
+    color: var(--cor-primaria-6);
+}
+
+.plano-preco {
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+}
+
+@media screen and (max-width: 1170px) {
+    #planos {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .plano {
+        width: calc(50% - 1.2vw);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .plano {
+        width: 100%;
+    }
+
+    #menu .section-subtitulo {
+        text-align: center;
+    }
+}
+
+
+
+/*<================= [testimonials] ======================>*/
+
+
+
+#testimonials {
+    min-height: calc(100vh - 9.1vw);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4.8vw;
+}
+
+#testimonial-fazendeiro {
+    width: 50vw;
+    height: auto;
+}
+
+#testimonials .section-subtitulo {
+    font-size: 3rem;
+}
+
+#testimonials-content {
+    width: 50%;
+}
+
+#feedbacks {
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+    margin-bottom: 4vw;
+    margin-top: 3vw;
+}
+
+.feedback {
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+    background-color: var(--cor-neutra-0);
+    padding: 1.2vw;
+    border-radius: 1.2vw;
+    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, .1);
+}
+
+.feedback-avatar {
+    width: 10vw;
+    height: 10vw;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+.feedback-content p {
+    display: flex;
+    justify-content: space-between;
+}
+
+.feedback-content p span {
+    color: var(--cor-primaria-6);
+}
+
+@media screen and (max-width: 1170px) {
+    #testimonials {
+        flex-direction: column;
+    }
+
+    #testimonials .section-subtitulo {
+        text-align: center;
+        font-size: 2.5rem;
+    }
+
+    #testimonial-fazendeiro {
+        display: none;
+    }
+
+    #testimonials-content {
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #testimonials .section-subtitulo {
+        font-size: 2rem;
+    }
+
+    #testimonials-content {
+        width: 98%;
+    }
+
+    .feedback {
+        flex-direction: column;
+    }
+}
+
+
+
+/*<================= [rodape] ======================>*/
+
+
+
+footer {
+    background-color: var(--cor-primaria-3);
+}
+
+#footer-items {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 8% 2.4vw 8%;
+    align-items: center;
+}
+
+#copyright {
+    color: var(--color-neutral-1);;
+    font-weight: 500;
+}
+
+    @media screen and (max-width: 600px) {
+        #footer-items {
+            flex-direction: column;
+            gap: 2vw;
+        }
+}
