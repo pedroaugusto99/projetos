@@ -46,6 +46,12 @@ $(document).ready(function() {
         distance:'20%'
     });
 
+    ScrollReveal().reveal('.servico', {
+        origin: 'left', 
+        duration: 2000,
+        distance:'20%'
+    });
+
     ScrollReveal().reveal('.plano', {
         origin: 'left', 
         duration: 2000,

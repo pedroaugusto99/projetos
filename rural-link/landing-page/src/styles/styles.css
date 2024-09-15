@@ -93,6 +93,16 @@ section {
 .section-subtitulo {
     font-size: 2.1875rem;
 }
+/*<================= [fim-Geral] ======================>*/
+
+
+
+
+
+
+
+
+
 
 /*<================= [header] ======================>*/
 
@@ -100,7 +110,7 @@ section {
 
 header {
     width: 100%;
-    padding: 2.8vw 8%;
+    padding: 1.5vw 8%;
     position: sticky;
     top: 0;
     background-color: var(--cor-primaria-1);
@@ -176,6 +186,15 @@ header {
         text-align: center;
     }
 }
+/*<================= [fim-header] ======================>*/
+
+
+
+
+
+
+
+
 
 
 /*<================= [home] ======================>*/
@@ -249,7 +268,7 @@ header {
     object-fit: cover;
     z-index: 2;
 
-    transform: translateY(-8vw);
+    transform: translateY(-3vw);
 }
 
 .forma {
@@ -287,6 +306,91 @@ header {
         display: none;
     } 
 }
+/*<================= [fim-home] ======================>*/
+
+
+
+
+
+
+
+
+
+
+
+/*<================= [servicos] ======================>*/
+
+#nossos-servicos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+#servicos {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 2.4vw;
+    margin-top: 3.2vw;
+    flex-wrap: wrap;
+}
+
+.servico {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 2vw;
+    gap: 1.8vw;
+    width: 20%;
+    padding: 2vw;
+    background-color: var(--cor-neutra-0);
+    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, .1);
+    overflow: hidden;
+}
+
+.servico-titulo {
+    text-align: center;
+}
+
+.icones-servicos {
+    font-size: 4vw;
+}
+
+.servico-descricao {
+    color: #434343;
+    text-align: center;
+}
+
+@media screen and (max-width: 1170px) {
+    #servicos {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .servico {
+        width: calc(50% - 1.2vw);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .servico {
+        width: 100%;
+    }
+
+    #nossos-servicos .section-subtitulo {
+        text-align: center;
+    }
+}
+
+
+/*<================= [fim-servicos] ======================>*/
+
+
+
+
 
 
 
@@ -316,9 +420,9 @@ header {
     flex-direction: column;
     align-items: center;
     border-radius: 2vw;
-    gap: 1.8vw;
-    width: 35%;
-    padding: 2vw;
+    gap: 1.6vw;
+    width: 40%;
+    padding: 3vw;
     background-color: var(--cor-neutra-0);
     box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, .1);
     overflow: hidden;
@@ -330,13 +434,34 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.563rem;
+    font-size: 1.263rem;
     color: var(--cor-primaria-1);
-    width: 7vw;
-    height: 7vw;
+    width: 5vw;
+    height: 5vw;
     right: -1vw;
     top: -1vw;
     border-radius: 0vw 3.75vw 0vw 4.25vw;
+}
+
+.numero-gado {
+    width: 15vw;
+    height: 15vw;
+    border-radius: 25%;
+    background-color: var(--cor-primaria-3);
+    text-align: center;
+}
+
+.numero-gado i {
+    font-size: 5vw;
+    margin-bottom: 2vw;
+}
+
+.numero-gado span {
+    font-weight: 800;
+}
+
+.plano-titulo {
+    text-align: center;
 }
 
 .plano-descricao {
@@ -363,6 +488,16 @@ header {
     .plano {
         width: calc(50% - 1.2vw);
     }
+
+    .numero-gado {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .numero-gado {
+        font-size: 0.6rem;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -373,7 +508,18 @@ header {
     #menu .section-subtitulo {
         text-align: center;
     }
+
+    .numero-gado {
+        height: 20vw;
+    }
 }
+/*<================= [fim-menu] ======================>*/
+
+
+
+
+
+
 
 
 
@@ -471,6 +617,66 @@ header {
         flex-direction: column;
     }
 }
+
+/*<================= [fim-testimonials] ======================>*/
+
+
+
+
+
+
+/*<================= [video] ======================>*/
+
+#sobre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+#sobre-nos {
+    width: 70%;
+    justify-content: center;
+    gap: 2.9vw;
+    margin-top: 3.2vw;
+    text-indent: 2vw;
+    text-align: center;
+}
+
+#sobre-nos p {
+    margin-bottom: 4vw;
+}
+
+#video {
+    background-color: var(--cor-primaria-2);
+    align-items: center;
+    justify-content: center;
+    color: var(--cor-primaria-1);
+    border-radius: 0vw 3.75vw 0vw 4.25vw;
+    padding: 2vw;
+    padding-bottom: 50%;
+    margin: 0vw -2vw 3vw -2vw;
+    text-indent: 7%;
+    position: relative;
+}
+
+#video > iframe {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+
+
+/*<================= [fim-video] ======================>*/
+
+
+
+
+
+
 
 
 
@@ -618,3 +824,4 @@ footer {
         padding: 3rem 2rem;
     }
 }
+/*<================= [fim-rodape] ======================>*/
