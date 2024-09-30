@@ -1,1 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <link rel="stylesheet" href="src/styles/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <section id="login">
+            <div id="imagem">
+                <img src="src/images/rural-link-logo.png" alt="Logo Rural Link">
+            </div>
+            <div id="formulario">
+
+                <h1>Login</h1>
+                <p>
+                    Seja bem-vindo(a) novamente. Faça login para acessar sua conta!
+                </p>
+                <form action="#" method="post" autocomplete="on">
+                    <div class="campo">
+                        <label for="ilogin">Login</label>
+                        <input type="email" name="login" id="ilogin" placeholder="seu e-mail" autocomplete="email" required maxlength="30">
+                    </div>
+                    <div class="campo">
+                        <label for="isenha">Senha</label>
+                        <input type="password" name="senha" id="isenha" placeholder="sua senha" autocomplete="current-password" required minlength="8" maxlength="20">
+                        <button id="togglePassword" class="toggle-button" type="button"><i class="fas fa-eye"></i></button>
+
+                    </div>
+                    <div class="campo">
+                        <label class="lembrar-senha">
+                            <input type="checkbox" id="lembrar-senha">
+                            Lembrar senha
+                        </label>
+                    </div>
+                    <input type="submit" value="Login">
+                    <div class="ou-container">
+                        <div class="linha"></div>
+                            <span>ou</span>
+                        <div class="linha"></div>
+                    </div>
+                    <div id="social-media">
+                        <a href="#" class="botao">
+                            <i class="fa-brands fa-apple"></i>
+                        </a>
+                        <a href="#" class="botao">
+                            <i class="fa-brands fa-google fa-sm"></i>
+                        </a>
+                    </div>
+                    <div id="nao-possui-conta">
+                        <p>Não possui uma conta?<a href="#"> Registre-se</a></p>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+<script src="src/scripts/script.js"></script>
+
+</body>
+</html>
