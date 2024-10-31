@@ -45,7 +45,7 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--cor-primaria-5);
+    background-color: var(--cor-primaria-1);
     border-radius: 1.2vw;
     padding: 1vw 1.4vw;
     font-weight: 600;
